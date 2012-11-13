@@ -1,0 +1,120 @@
+digraph g {
+"node0" [
+fixedsize = "true"
+width = "1.5"
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node1" [
+fixedsize = "true"
+width = "1.5"
+
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node2" [
+fixedsize = "true"
+width = "1.5"
+
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node3" [
+fixedsize = "true"
+width = "1.5"
+
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node4" [
+fixedsize = "true"
+width = "1.5"
+
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node5" [
+fixedsize = "true"
+width = "1.5"
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node6" [
+fixedsize = "true"
+width = "1.5"
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node7" [
+fixedsize = "true"
+width = "1.5"
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node8" [
+fixedsize = "true"
+width = "1.5"
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node9" [
+fixedsize = "true"
+width = "1.5"
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node10" [
+fixedsize = "true"
+width = "1.5"
+label = "<f0> 0|<f1> 1|<f2> 2|<f3> 3 | <f4> 4 | <f5> 5 | <f6> 6 | <f7> 7"
+shape = "Mrecord"
+];
+"node11" [
+height = "0.4"
+width  = "0.4"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"node12" [
+height = "0.4"
+width  = "0.4"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"node13" [
+height = "0.4"
+width  = "0.4"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"node14" [
+height = "0.4"
+width  = "0.4"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+
+"node0":f1 -> "node1":f4
+"node0":f7 -> "node2":f4
+"node1":f2 -> "node3":f4
+"node1":f6 -> "node4":f4
+"node2":f0 -> "node5":f4
+"node2":f5 -> "node6":f4
+"node3":f0 -> "node7":f4
+"node4":f0 -> "node8":f4
+"node5":f1 -> "node9":f4
+"node6":f6 -> "node10":f4
+"node7":f0 -> "node11"
+"node8":f0 -> "node12"
+"node9":f2 -> "node13"
+"node10":f7 -> "node14"
+}
+

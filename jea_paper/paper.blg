@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: paper.aux
+The style file: acmtrans.bst
+Database file #1: paper.bib
+Warning--no number and no volume in Demaine03
+Warning--page numbers missing in Demaine03
+Warning--empty publisher in Dementiev+04
+Warning--empty address in Dementiev+04
+Warning--no number and no volume in IEEE-754-2008
+Warning--empty address in KnesslSzpankowski00a
+Warning--page numbers missing in KnesslSzpankowski00b
+Warning--empty publisher in KordaRaman99
+Warning--empty address in KordaRaman99
+Warning--empty publisher in NashGregg08
+Warning--empty publisher in Sinha04
+Warning--empty publisher in SinhaWirth08
+Warning--empty address in SinhaWirth08
+You've used 32 entries,
+            2969 wiz_defined-function locations,
+            932 strings with 10774 characters,
+and the built_in function-call counts, 23426 in all, are:
+= -- 2048
+> -- 1568
+< -- 0
++ -- 472
+- -- 550
+* -- 2049
+:= -- 4154
+add.period$ -- 140
+call.type$ -- 32
+change.case$ -- 225
+chr.to.int$ -- 31
+cite$ -- 45
+duplicate$ -- 706
+empty$ -- 1472
+format.name$ -- 637
+if$ -- 4480
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 43
+newline$ -- 166
+num.names$ -- 322
+pop$ -- 202
+preamble$ -- 1
+purify$ -- 418
+quote$ -- 0
+skip$ -- 729
+stack$ -- 0
+substring$ -- 1280
+swap$ -- 248
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 606
+warning$ -- 13
+while$ -- 337
+width$ -- 0
+write$ -- 450
+(There were 13 warnings)

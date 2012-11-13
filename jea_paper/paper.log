@@ -1,0 +1,213 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2006.8.23)  30 JUN 2009 11:54
+entering extended mode
+**paper
+(./paper.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(./acmtrans2m.cls
+Document Class: acmtrans2m 1996/07/03 ACM Transactions class based on <23 April
+ 96>
+(/usr/share/texmf/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/share/texmf/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+)
+\normaltextheight=\dimen102
+\c@secnumbookdepth=\count79
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\@narrowfig=\dimen103
+\@nfigbox=\box26
+\@nfcapbox=\box27
+\@abstract=\box28
+\@terms=\box29
+\@keywords=\box30
+\bibhang=\skip41
+\bibindent=\dimen104
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+\c@theorem=\count87
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 34.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 34.
+
+(/usr/share/texmf/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) (./paper.aux)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 44.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+
+(/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
+\c@tempo=\count88
+ [1
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 116.
+ [2] [3]
+File: figs/simple_trie.eps Graphic file (type eps)
+ <figs/simple_trie.eps>
+File: figs/trie1.eps Graphic file (type eps)
+
+<figs/trie1.eps> [4]
+File: figs/trie2.eps Graphic file (type eps)
+ <figs/trie2.eps>
+File: figs/or_tree.eps Graphic file (type eps)
+ <figs/or_tree.eps> [5] [6]
+File: plots/nstructs_cyc.eps Graphic file (type eps)
+
+<plots/nstructs_cyc.eps>
+File: plots/nstructs_ins.eps Graphic file (type eps)
+ <plots/nstructs_ins.eps>
+File: plots/nstructs_brmsp.eps Graphic file (type eps)
+ <plots/nstructs_brmsp.eps>
+File: plots/nstructs_l1dcm.eps Graphic file (type eps)
+
+<plots/nstructs_l1dcm.eps>
+Overfull \hbox (13.20044pt too wide) in paragraph at lines 337--352
+ [] 
+ []
+
+[7]
+Underfull \vbox (badness 4378) has occurred while \output is active []
+
+ [8]
+File: figs/binary_trie.eps Graphic file (type eps)
+
+<figs/binary_trie.eps>
+File: figs/lc_trie.eps Graphic file (type eps)
+ <figs/lc_trie.eps> [9]
+Overfull \hbox (0.35703pt too wide) in paragraph at lines 453--454
+[]\OT1/cmr/m/n/10 A \OT1/cmr/m/it/10 level and path com-pressed burst trie \OT1
+/cmr/m/n/10 or $\OML/cmm/m/it/10 LPCB$\OT1/cmr/m/it/10 -trie\OT1/cmr/m/n/10 , w
+ith bucket
+ []
+
+[10]
+File: plots/burst_irandom_time_knuth.eps Graphic file (type eps)
+ <plots/burst_irandom_time_knuth.eps>
+File: plots/burst_irandom_mem_knuth.eps Graphic file (type eps)
+ <plots/burst_irandom_mem_knuth.eps>
+
+LaTeX Warning: Float too large for page by 6.80826pt on input line 526.
+
+[11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 602--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--619
+
+ []
+
+[14]
+File: plots/knuth_irandom_time.eps Graphic file (type eps)
+ <plots/knuth_irandom_time.eps>
+File: plots/knuth_irandom_mem.eps Graphic file (type eps)
+ <plots/knuth_irandom_mem.eps>
+File: plots/knuth_locate_time.eps Graphic file (type eps)
+
+<plots/knuth_locate_time.eps>
+File: plots/knuth_drandom_time.eps Graphic file (type eps)
+ <plots/knuth_drandom_time.eps>
+File: plots/athena_irandom_time.eps Graphic file (type eps)
+
+<plots/athena_irandom_time.eps>
+File: plots/athena_irandom_mem.eps Graphic file (type eps)
+ <plots/athena_irandom_mem.eps>
+File: plots/athena_locate_time.eps Graphic file (type eps)
+
+<plots/athena_locate_time.eps>
+File: plots/athena_drandom_time.eps Graphic file (type eps)
+ <plots/athena_drandom_time.eps> [15] [16]
+[17] [18] [19] [20]
+File: plots/knuth_valgrind_time.eps Graphic file (type eps)
+ <plots/knuth_valgrind_time.eps>
+File: plots/knuth_valgrind_mem.eps Graphic file (type eps)
+
+<plots/knuth_valgrind_mem.eps>
+File: plots/athena_valgrind_time.eps Graphic file (type eps)
+ <plots/athena_valgrind_time.eps>
+File: plots/athena_valgrind_mem.eps Graphic file (type eps)
+
+<plots/athena_valgrind_mem.eps> [21]
+File: plots/athena_36_genome_time.eps Graphic file (type eps)
+ <plots/athena_36_genome_time.eps>
+File: plots/athena_36_genome_mem.eps Graphic file (type eps)
+
+<plots/athena_36_genome_mem.eps> [22]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [23]
+(./paper.bbl [24]) [25] (./paper.aux) ) 
+Here is how much of TeX's memory you used:
+ 976 strings out of 94501
+ 11816 string characters out of 1176789
+ 66458 words of memory out of 1000000
+ 4143 multiletter control sequences out of 10000+50000
+ 11742 words of font info for 45 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 26i,8n,21p,1314b,393s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on paper.dvi (25 pages, 95580 bytes).

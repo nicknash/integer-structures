@@ -1,0 +1,116 @@
+digraph g {
+"node0" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0| <f1> 1"
+shape = "Mrecord"
+];
+"node1" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0|<f1> 1"
+shape = "Mrecord"
+];
+"node2" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0|<f1> 1"
+shape = "Mrecord"
+];
+"node6" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0|<f1> 1"
+shape = "Mrecord"
+];
+"node8" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0|<f1> 1"
+shape = "Mrecord"
+];
+"node9" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0|<f1> 1"
+shape = "Mrecord"
+];
+
+
+"leafA" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafB" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafC" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafD" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafE" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafF" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafG" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+
+"node0":f0 -> "node1"
+"node0":f1 -> "node2"
+
+"node1":f0 -> "leafA"
+"node1":f1 -> "leafB"
+
+
+"node2":f0 -> "leafC"
+"node2":f1 -> "node6"
+
+"node6":f0 -> "node8"
+"node6":f1 -> "node9"
+
+"node8":f0 -> "leafD"
+"node8":f1 -> "leafE"
+
+"node9":f0 -> "leafF"
+"node9":f1 -> "leafG"
+}
+

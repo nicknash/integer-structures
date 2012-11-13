@@ -1,0 +1,21 @@
+set key top left Left
+set term postscript eps 20 
+set boxwidth 0.5 absolute 
+set style data linespoints 
+set yrange [0:] 
+#set ticscale 0 0 
+set offsets .1, .5, 0, 0 
+set bmargin 3 
+set logscale x
+set xlabel 'Log2(Number of keys)'
+set xtics ("14" 16384, "15" 32768, "16" 65536, "17" 131072, "18" 262144, "19" 524288, "20" 1048576, "21" 2097152, "22" 4194304, "23" 8388608, "24" 16777216, "25" 33554432, "26" 67108864, "27" 134217728)
+set xrange [16384:]
+set ylabel 'Microseconds per operation'
+set output '../plots/knuth_drandom_time.eps'
+plot \
+'../data/averaged_knuth_results/map_drandom_time' using 1:2 title 'Red-black tree', \
+'../data/averaged_knuth_results/btree_drandom_time' using 1:2 title 'B-tree', \
+'../data/averaged_knuth_results/stree_drandom_time' using 1:2 title 'S-tree', \
+'../data/averaged_knuth_results/lpcqtrie_drandom_time' using 1:2 title 'LPCQ-trie',\
+'../data/averaged_knuth_results/lpcbtrie_drandom_time' using 1:2 title 'LPCB-trie'
+

@@ -1,0 +1,22 @@
+set key top left Left
+set term postscript eps 20 
+set boxwidth 0.4 absolute 
+#set style data linespoints 
+set style fill pattern 0 border -1
+set yrange [0:] 
+#set ticscale 0 0 
+set offsets .1, .5, 0, 0 
+set bmargin 3
+set xtics ("LPCB-trie" 0, "LPCQ-trie" 1, "B-tree" 2, "Red-black tree" 3) 
+#set logscale x
+#set xlabel 'Number of keys'
+#set xtics ("2^16" 65536, "2^17" 131072, "2^18" 262144, "2^19" 524288, "2^20" 1048576, "2^21" 2097152, "2^22" 4194304, "2^23" 8388608, "2^24" 16777216, "2^25" 33554432, "2^26" 67108864)
+#set xrange [65536:]
+set ylabel 'Seconds'
+set output '../plots/athena_genome_time.eps'
+
+plot \
+'../data/averaged_athena_results/lpcbtrie_genome_time' using ($0+0):1 title 'LPCB-trie' with boxes lt -1,\
+'../data/averaged_athena_results/lpcqtrie_genome_time' using ($0+1):1 title 'LPCQ-trie' with boxes lt -1,\
+'../data/averaged_athena_results/btree_genome_time' using ($0+2):1 title 'B-tree' with boxes lt -1,\
+'../data/averaged_athena_results/map_genome_time' using ($0+3):1 title 'Red-black tree' with boxes lt -1

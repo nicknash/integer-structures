@@ -1,0 +1,128 @@
+\relax 
+\citation{Knuth98}
+\citation{BayerMcCreight72,Knuth98}
+\citation{Cormen+01}
+\citation{Stroustrup97}
+\citation{vanEmdeBoas77}
+\citation{Willard84}
+\newlabel{@firstpg}{{}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Background and Motivation}{1}}
+\citation{Dementiev+04}
+\citation{MehlhornNaher90}
+\citation{Heinz+02}
+\citation{AnderssonNilsson93}
+\citation{NashGregg08}
+\citation{IEEE-754-2008}
+\citation{Dementiev+04,KordaRaman99}
+\citation{Dementiev+04}
+\citation{vanEmdeBoas77}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Related Work and Contributions}{2}}
+\newlabel{related_work}{{1.2}{2}}
+\citation{KordaRaman99}
+\citation{Willard84}
+\citation{Acharya+99}
+\citation{Dietzfelbinger+94,Dietzfelbinger+08}
+\citation{Heinz+02}
+\citation{NashGregg08}
+\citation{Sussenguth63}
+\citation{Knuth98}
+\citation{KnesslSzpankowski00a,KnesslSzpankowski00b}
+\citation{Heinz+02}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces (a) Shows a trie holding the keys 1200, 1600, 7012 and 7567. The leaves of the trie (black squares) hold the satellite data associated with the keys. A corresponding burst trie, with bucket capacity 2, is shown in (b).}}{4}}
+\newlabel{simple_trie}{{1}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{4}}
+\newlabel{background}{{2}{4}}
+\citation{Heinz+02}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) Shows the burst trie of Figure 1\hbox {}(b) after inserting the key 1601. Assuming the buckets can hold at most two key suffixes, inserting the key 1601 causes the left bucket shown in Figure 1\hbox {}(b) to burst. In (b) an OR-tree is shown, a possible in-node data structure for implementing a burst trie.}}{5}}
+\newlabel{burst_fig}{{2}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Engineering Burst Tries}{5}}
+\citation{Demaine03}
+\citation{Bender+00,Brodal+02}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}In-Node Data Structures}{6}}
+\newlabel{in_node_structs}{{3.1}{6}}
+\citation{Heinz+02}
+\citation{SleatorTarjan85}
+\citation{SinhaWirth08,Sinha+06,SinhaZobel05,SinhaZobel04,Sinha04}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Bucket Data Structures}{7}}
+\newlabel{bucket_structs}{{3.2}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces This figure shows a comparison of the in-node data structures described in Section 3.1\hbox {}. The results are averaged over several thousand successor search operations on a sparse bit-vector, and were gathered using PAPI [Dongarra et al. 2003] on an Intel Core 2 2.13GHz, having a 32KB level 1 data cache. All of the data structures fit within the level 1 data cache. We note the reduced branch mispredictions of the counter search, shown in (c) and its better spatial locality shown in (d), are not enough to compensate for its larger instruction count compared to the OR-tree, shown in (b). As a result, except for very small inputs, the OR-tree performs best, as is shown in (a). The cache oblivious OR-tree is labelled ``OR-tree (CO)''. Due to the extra expense of computing the cache oblivious indexing for this data structure, its performance is worse than the standard OR-tree, despite its better spatial locality, visible in (d). The transition points visible in the cache oblivious OR-tree's performance at $2^{15}$ bits are a result of that fact that at $2^{15}$ bits indexing reverts to breadth-first layout (without this reversion, the overhead of its cache oblivious indexing is even higher).}}{8}}
+\newlabel{node_structs_plots}{{3}{8}}
+\citation{AnderssonNilsson93}
+\citation{Nilsson96}
+\citation{NilssonTikkanen02}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces (a) Shows a binary trie, while (b) shows a level compressed trie. The level compressed trie in (b) is obtained from (a) by replacing the top-most $i$ complete levels of the trie with a single node of branching factor $2^i$, and then repeating the process on the children.}}{9}}
+\newlabel{lctrie_fig}{{4}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Level and Path Compressed Tries}{9}}
+\newlabel{level_path_comp}{{3.3}{9}}
+\citation{NilssonTikkanen02}
+\citation{NilssonTikkanen02}
+\citation{NilssonTikkanen02}
+\citation{JansonSzpankowski07}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Operations}{11}}
+\newlabel{operations}{{3.4}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces (a) Shows the average time required by the trie structures to perform a \textit  {locate} operation for a uniform random 32-bit key as the number of keys inserted into the data structure increases. The burst trie without either level or path compression and with a wide root is labelled ``$WB$-trie''. The burst trie without either level or path compression and also without a wide root is labelled ``$TB$-trie''. The burst trie with path compression only is labelled ``$PCB$-trie''. The burst trie with level compression only is labelled ``$LCB$-trie''. Finally the burst trie with both level and path compression is labelled ``$LPCB$-trie''. (b) Shows the memory required by the data structures. Due to the slight overhead of measuring the memory consumed by the data structures we were unable to measure the memory used by the $TB$-trie for data sets of $2^{25}$ random key insertions or higher. Since path compression has little effect on this uniform random data, the memory consumption of the $WB$-trie and $PCB$-trie is essentially identical. Also, the memory consumption of the $LCB$-trie and $LPCB$-trie is almost identical for the same reason. These results are discussed in Section 3.3\hbox {}.}}{12}}
+\newlabel{burst_trie_comparison_fig}{{5}{12}}
+\citation{Stroustrup97}
+\citation{Dementiev+04}
+\citation{KordaRaman99}
+\citation{Brent04}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Comparison}{14}}
+\newlabel{exp_comparison}{{4}{14}}
+\citation{SinhaZobel04}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Random Data}{15}}
+\newlabel{random_results}{{4.1}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces This figure shows measurements gathered for uniform random 32-bit keys. (a) Shows the average time per insertion operation. The $LPCB$-trie performs best, and better than the comparison-based structures at all input sizes, while the $LPCQ$-trie and $S$-tree also perform well. (b) Shows the space occupied by the data structures after a sequence of insertions. The $LPCB$-trie and $LPCQ$-trie require the least space, and the $B$-tree is also competitive. We note that the $S$-tree consistently requires a large amount of extra space compared to the other structures. These results are discussed in Section 4.1\hbox {}}}{16}}
+\newlabel{knuth_irandom_time_mem_fig}{{6}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces This figure shows measurements gathered for uniform random 32-bit keys. (a) Shows the average time per locate operation on the data structures as the number of keys in the structure increases. Note that results are shown until the data structure occupies all of main memory. The $S$-tree performs very well, as does the $LPCB$-trie. (b) Shows the average time per operation for a mixed sequence of equiprobable insertions and deletions. The deletions are of keys that have already been inserted to the data structure. These results are dicussed in Section 4.1\hbox {}.}}{17}}
+\newlabel{knuth_locate_delete_time_fig}{{7}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces This figure shows measurements gathered for uniform random 64-bit keys. Note that the $S$-tree does not appear in this figure because it is restricted to use with 32-bit keys. Results are shown until the data structures occupies all of main memory. (a) Shows the average time per insertion operation. The $LPCB$-trie performs best, and better than the comparison-based structures at all input sizes, while the $LPCQ$-trie also performs well. (b) Shows the space occupied by the data structures after a sequence of insertions. Again the $LPCQ$-trie requires the least space, followed by the $LPCB$-trie. As expected, both use approximately double what is required in the 32-bit case, shown in Figure 6\hbox {}(b), as one expects. These results are discussed in Section 4.1\hbox {}.}}{18}}
+\newlabel{athena_irandom_time_mem_fig}{{8}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  This figure shows measurements gathered for uniform random 64-bit keys. Note that the $S$-tree does not appear in this figure because it is restricted to use with 32-bit keys. Results are shown until the data structures occupies all of main memory. (a) Shows the average time per locate operation. The $LPCB$-trie performs best, and better than the comparison-based structures at all input sizes, while the $LPCQ$-trie also performs well. (b) Shows the time required for a mixed sequence of equiprobable insertions and deletions. The deletions are of keys that are already present in the data structures. These results are discussed in Section 4.1\hbox {}.}}{19}}
+\newlabel{athena_locate_delete_time_fig}{{9}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces This figure shows (a) the time, and (b) the space required by the data structures to process the 32-bit Valgrind data sets. In (c) and (d) respectively the time and space required to process the 64-bit Valgrind data sets are shown. The results of (a) and (b) are gathered on the 32-bit machine, while the results of (c) and (d) on the 64-bit machine. Note that the $S$-tree is not included in the 64-bit results because it is restricted to 32-bit keys. The Valgrind data sets are described in Section 4\hbox {}. These results are discussed in Section 4.2\hbox {}.}}{21}}
+\newlabel{valgrind_results}{{10}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Valgrind Data}{21}}
+\newlabel{valgrind_results_text}{{4.2}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces This figure shows results for processing the Genome data set (described in Section 4\hbox {}). These results were gathered on the 64-bit machine. The keys are 36-bit integers. In (a), the time to insert and then search for all the keys of the data set is shown. While (b) shows the space required by each data structure.}}{22}}
+\newlabel{athena_genome_36_fig}{{11}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Genome Data}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and Future Work}{22}}
+\citation{Dementiev+04}
+\citation{KordaRaman99}
+\citation{Willard84}
+\bibstyle{acmtrans}
+\bibdata{paper}
+\bibcite{Acharya+99}{\citeauthoryear {Acharya, Zhu, and Shen}{Acharya et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{1999}}
+\bibcite{AnderssonNilsson93}{\citeauthoryear {Andersson and Nilsson}{Andersson and Nilsson}{1993}}
+\bibcite{BayerMcCreight72}{\citeauthoryear {Bayer and McCreight}{Bayer and McCreight}{1972}}
+\bibcite{Bender+00}{\citeauthoryear {Bender, Demaine, and Farach-Colton}{Bender et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{2000}}
+\bibcite{Brent04}{\citeauthoryear {Brent}{Brent}{2004}}
+\bibcite{Brodal+02}{\citeauthoryear {Brodal, Fagerberg, and Jacob}{Brodal et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{2002}}
+\bibcite{Cormen+01}{\citeauthoryear {Cormen, Leiserson, Rivest, and Stein}{Cormen et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{2001}}
+\bibcite{Demaine03}{\citeauthoryear {Demaine}{Demaine}{2003}}
+\bibcite{Dementiev+04}{\citeauthoryear {Dementiev, Kettner, Mehnert, and Sanders}{Dementiev et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{2004}}
+\bibcite{Dietzfelbinger+08}{\citeauthoryear {Dietzfelbinger, H\"{u}hne, and Weidling}{Dietzfelbinger et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{2008}}
+\bibcite{Dietzfelbinger+94}{\citeauthoryear {Dietzfelbinger, Karlin, Mehlhorn, Meyer auf\nobreakspace  {}der Heide, Rohnert, and Tarjan}{Dietzfelbinger et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{1994}}
+\bibcite{Heinz+02}{\citeauthoryear {Heinz, Zobel, and Williams}{Heinz et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{2002}}
+\bibcite{IEEE-754-2008}{\citeauthoryear {IEEE}{IEEE}{2008}}
+\bibcite{JansonSzpankowski07}{\citeauthoryear {Janson and Szpankowski}{Janson and Szpankowski}{2007}}
+\bibcite{KnesslSzpankowski00a}{\citeauthoryear {Knessl and Szpankowski}{Knessl and Szpankowski}{2000a}}
+\bibcite{KnesslSzpankowski00b}{\citeauthoryear {Knessl and Szpankowski}{Knessl and Szpankowski}{2000b}}
+\bibcite{Knuth98}{\citeauthoryear {Knuth}{Knuth}{1998}}
+\bibcite{KordaRaman99}{\citeauthoryear {Korda and Raman}{Korda and Raman}{1999}}
+\bibcite{MehlhornNaher90}{\citeauthoryear {Mehlhorn and N\"{a}her}{Mehlhorn and N\"{a}her}{1990}}
+\bibcite{NashGregg08}{\citeauthoryear {Nash and Gregg}{Nash and Gregg}{2008}}
+\bibcite{Nilsson96}{\citeauthoryear {Nilsson}{Nilsson}{1996}}
+\bibcite{NilssonTikkanen02}{\citeauthoryear {Nilsson and Tikkanen}{Nilsson and Tikkanen}{2002}}
+\bibcite{Sinha04}{\citeauthoryear {Sinha}{Sinha}{2004}}
+\bibcite{Sinha+06}{\citeauthoryear {Sinha, Ring, and Zobel}{Sinha et\nobreakspace  {}al\unhbox \voidb@x \hbox {.}}{2006}}
+\bibcite{SinhaWirth08}{\citeauthoryear {Sinha and Wirth}{Sinha and Wirth}{2008}}
+\bibcite{SinhaZobel04}{\citeauthoryear {Sinha and Zobel}{Sinha and Zobel}{2004}}
+\bibcite{SinhaZobel05}{\citeauthoryear {Sinha and Zobel}{Sinha and Zobel}{2005}}
+\bibcite{SleatorTarjan85}{\citeauthoryear {Sleator and Tarjan}{Sleator and Tarjan}{1985}}
+\bibcite{Stroustrup97}{\citeauthoryear {Stroustrup}{Stroustrup}{1997}}
+\bibcite{Sussenguth63}{\citeauthoryear {Sussenguth}{Sussenguth}{1963}}
+\bibcite{vanEmdeBoas77}{\citeauthoryear {van Emde\nobreakspace  {}Boas}{van Emde\nobreakspace  {}Boas}{1977}}
+\bibcite{Willard84}{\citeauthoryear {Willard}{Willard}{1984}}
+\newlabel{@lastpg}{{5}{25}}

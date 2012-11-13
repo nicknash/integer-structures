@@ -1,0 +1,212 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Acharya, Zhu, and Shen}{Acharya
+  et~al\mbox{.}}{1999}]{Acharya+99}
+{\sc Acharya, A.}, {\sc Zhu, H.}, {\sc and} {\sc Shen, K.} 1999.
+\newblock Adaptive algorithms for cache-efficient trie search.
+\newblock In {\em ALENEX '99: 1st International Workshop on Algorithm
+  Engineering and Experimentation}. Springer-Verlag, London, UK, 296--311.
+
+\bibitem[\protect\citeauthoryear{Andersson and Nilsson}{Andersson and
+  Nilsson}{1993}]{AnderssonNilsson93}
+{\sc Andersson, A.} {\sc and} {\sc Nilsson, S.} 1993.
+\newblock Improved behaviour of tries by adaptive branching.
+\newblock {\em Inf. Process. Lett.\/}~{\em 46,\/}~6, 295--300.
+
+\bibitem[\protect\citeauthoryear{Bayer and McCreight}{Bayer and
+  McCreight}{1972}]{BayerMcCreight72}
+{\sc Bayer, R.} {\sc and} {\sc McCreight, E.~M.} 1972.
+\newblock Organization and maintenance of large ordered indices.
+\newblock {\em Acta Inf.\/}~{\em 1}, 173--189.
+
+\bibitem[\protect\citeauthoryear{Bender, Demaine, and Farach-Colton}{Bender
+  et~al\mbox{.}}{2000}]{Bender+00}
+{\sc Bender, M.~A.}, {\sc Demaine, E.~D.}, {\sc and} {\sc Farach-Colton, M.}
+  2000.
+\newblock Cache-oblivious b-trees.
+\newblock In {\em FOCS '00: Proceedings of the 41st Annual Symposium on
+  Foundations of Computer Science}. IEEE Computer Society, Washington, DC, USA,
+  399.
+
+\bibitem[\protect\citeauthoryear{Brent}{Brent}{2004}]{Brent04}
+{\sc Brent, R.~P.} 2004.
+\newblock Note on marsaglia's xorshift random number generators.
+\newblock {\em Journal of Statistical Software\/}~{\em 11,\/}~5, 1--4.
+
+\bibitem[\protect\citeauthoryear{Brodal, Fagerberg, and Jacob}{Brodal
+  et~al\mbox{.}}{2002}]{Brodal+02}
+{\sc Brodal, G.~S.}, {\sc Fagerberg, R.}, {\sc and} {\sc Jacob, R.} 2002.
+\newblock Cache oblivious search trees via binary trees of small height.
+\newblock In {\em SODA '02: Proceedings of the thirteenth annual ACM-SIAM
+  symposium on Discrete algorithms}. Society for Industrial and Applied
+  Mathematics, Philadelphia, PA, USA, 39--48.
+
+\bibitem[\protect\citeauthoryear{Cormen, Leiserson, Rivest, and Stein}{Cormen
+  et~al\mbox{.}}{2001}]{Cormen+01}
+{\sc Cormen, T.~H.}, {\sc Leiserson, C.~E.}, {\sc Rivest, R.~L.}, {\sc and}
+  {\sc Stein, C.} 2001.
+\newblock {\em Introduction to Algorithms\/}, 2nd ed.
+\newblock MIT Press, Cambridge, MA, USA, 273--301.
+
+\bibitem[\protect\citeauthoryear{Demaine}{Demaine}{2003}]{Demaine03}
+{\sc Demaine, E.} 2003.
+\newblock Fixed universe successor problem.
+\newblock {\em Advanced Data Structures, MIT Course 6.897\/}.
+
+\bibitem[\protect\citeauthoryear{Dementiev, Kettner, Mehnert, and
+  Sanders}{Dementiev et~al\mbox{.}}{2004}]{Dementiev+04}
+{\sc Dementiev, R.}, {\sc Kettner, L.}, {\sc Mehnert, J.}, {\sc and} {\sc
+  Sanders, P.} 2004.
+\newblock Engineering a sorted list data structure for 32 bit keys.
+\newblock In {\em Proc. of the Sixth SIAM Workshop on Algorithm Engineering and
+  Experiments, New Orleans, LA, USA}. 142--151.
+
+\bibitem[\protect\citeauthoryear{Dietzfelbinger, H\"{u}hne, and
+  Weidling}{Dietzfelbinger et~al\mbox{.}}{2008}]{Dietzfelbinger+08}
+{\sc Dietzfelbinger, M.}, {\sc H\"{u}hne, M.}, {\sc and} {\sc Weidling, C.}
+  2008.
+\newblock A dictionary implementation based on dynamic perfect hashing.
+\newblock {\em J. Exp. Algorithmics\/}~{\em 12}, 1--25.
+
+\bibitem[\protect\citeauthoryear{Dietzfelbinger, Karlin, Mehlhorn, Meyer
+  auf~der Heide, Rohnert, and Tarjan}{Dietzfelbinger
+  et~al\mbox{.}}{1994}]{Dietzfelbinger+94}
+{\sc Dietzfelbinger, M.}, {\sc Karlin, A.}, {\sc Mehlhorn, K.}, {\sc Meyer
+  auf~der Heide, F.}, {\sc Rohnert, H.}, {\sc and} {\sc Tarjan, R.~E.} 1994.
+\newblock Dynamic perfect hashing: Upper and lower bounds.
+\newblock {\em SIAM J. Comput.\/}~{\em 23,\/}~4, 738--761.
+
+\bibitem[\protect\citeauthoryear{Heinz, Zobel, and Williams}{Heinz
+  et~al\mbox{.}}{2002}]{Heinz+02}
+{\sc Heinz, S.}, {\sc Zobel, J.}, {\sc and} {\sc Williams, H.~E.} 2002.
+\newblock Burst tries: a fast, efficient data structure for string keys.
+\newblock {\em ACM Trans. Inf. Syst.\/}~{\em 20,\/}~2, 192--223.
+
+\bibitem[\protect\citeauthoryear{IEEE}{IEEE}{2008}]{IEEE-754-2008}
+{\sc IEEE}. 2008.
+\newblock Standard for floating-point arithmetic.
+\newblock {\em IEEE Std 754-2008\/}, 1--58.
+
+\bibitem[\protect\citeauthoryear{Janson and Szpankowski}{Janson and
+  Szpankowski}{2007}]{JansonSzpankowski07}
+{\sc Janson, S.} {\sc and} {\sc Szpankowski, W.} 2007.
+\newblock Partial fillup and search time in lc tries.
+\newblock {\em ACM Trans. Algorithms\/}~{\em 3,\/}~4, 44.
+
+\bibitem[\protect\citeauthoryear{Knessl and Szpankowski}{Knessl and
+  Szpankowski}{2000a}]{KnesslSzpankowski00a}
+{\sc Knessl, C.} {\sc and} {\sc Szpankowski, W.} 2000a.
+\newblock Heights in generalized tries and patricia tries.
+\newblock In {\em LATIN 2000: Theoretical Informatics, 4th Latin American
+  Symposium, Punta del Este, Uruguay}. Springer, 298--307.
+\newblock LNCS 1776.
+
+\bibitem[\protect\citeauthoryear{Knessl and Szpankowski}{Knessl and
+  Szpankowski}{2000b}]{KnesslSzpankowski00b}
+{\sc Knessl, C.} {\sc and} {\sc Szpankowski, W.} 2000b.
+\newblock A note on the asymptotic behavior of the heights in b-tries for b
+  large.
+\newblock {\em Electr. J. Comb.\/}~{\em 7}.
+
+\bibitem[\protect\citeauthoryear{Knuth}{Knuth}{1998}]{Knuth98}
+{\sc Knuth, D.~E.} 1998.
+\newblock {\em The Art Of Computer Programming, Volume 3 (2nd ed.): Sorting And
+  Searching}.
+\newblock Addison Wesley Longman Publishing Co., Inc., Redwood City, CA, USA,
+  458--478, 482--491, 506.
+
+\bibitem[\protect\citeauthoryear{Korda and Raman}{Korda and
+  Raman}{1999}]{KordaRaman99}
+{\sc Korda, M.} {\sc and} {\sc Raman, R.} 1999.
+\newblock An experimental evaluation of hybrid data structures for searching.
+\newblock In {\em Proc. of the 3rd International Workshop on Algorithm
+  Engineering (WAE), London, UK}. 213--227.
+
+\bibitem[\protect\citeauthoryear{Mehlhorn and N\"{a}her}{Mehlhorn and
+  N\"{a}her}{1990}]{MehlhornNaher90}
+{\sc Mehlhorn, K.} {\sc and} {\sc N\"{a}her, S.} 1990.
+\newblock Bounded ordered dictionaries in o(loglogn) time and o(n) space.
+\newblock {\em Inf. Process. Lett.\/}~{\em 35,\/}~4, 183--189.
+
+\bibitem[\protect\citeauthoryear{Nash and Gregg}{Nash and
+  Gregg}{2008}]{NashGregg08}
+{\sc Nash, N.} {\sc and} {\sc Gregg, D.} 2008.
+\newblock Comparing integer data structures for 32 and 64 bit keys.
+\newblock In {\em Proceedings of the Seventh International Workshop on
+  Experimental Algorithms}, {C.~McGeoch}, Ed. Provincetown, Cape Cod, MA, USA,
+  28--42.
+\newblock LNCS 5038.
+
+\bibitem[\protect\citeauthoryear{Nilsson}{Nilsson}{1996}]{Nilsson96}
+{\sc Nilsson, S.} 1996.
+\newblock Radix sorting and searching.
+\newblock Ph.D. thesis, Lund University.
+
+\bibitem[\protect\citeauthoryear{Nilsson and Tikkanen}{Nilsson and
+  Tikkanen}{2002}]{NilssonTikkanen02}
+{\sc Nilsson, S.} {\sc and} {\sc Tikkanen, M.} 2002.
+\newblock An experimental study of compression methods for dynamic tries.
+\newblock {\em Algorithmica\/}~{\em 33,\/}~1, 19--33.
+
+\bibitem[\protect\citeauthoryear{Sinha}{Sinha}{2004}]{Sinha04}
+{\sc Sinha, R.} 2004.
+\newblock Using compact tries for cache-efficient sorting of integers.
+\newblock In {\em Proc. of the Third International Workshop on Efficient and
+  Experimental Algorithms (WEA 2004)}, {C.~C. Ribeiro}, Ed. Angra dos Reis, Rio
+  de Janeiro, Brazil, 513--528.
+\newblock LNCS 3059.
+
+\bibitem[\protect\citeauthoryear{Sinha, Ring, and Zobel}{Sinha
+  et~al\mbox{.}}{2006}]{Sinha+06}
+{\sc Sinha, R.}, {\sc Ring, D.}, {\sc and} {\sc Zobel, J.} 2006.
+\newblock Cache-efficient string sorting using copying.
+\newblock {\em J. Exp. Algorithmics\/}~{\em 11}, 1.2.
+
+\bibitem[\protect\citeauthoryear{Sinha and Wirth}{Sinha and
+  Wirth}{2008}]{SinhaWirth08}
+{\sc Sinha, R.} {\sc and} {\sc Wirth, A.} 2008.
+\newblock Engineering burstsort: Towards fast in-place string sorting.
+\newblock In {\em WEA}. 14--27.
+
+\bibitem[\protect\citeauthoryear{Sinha and Zobel}{Sinha and
+  Zobel}{2004}]{SinhaZobel04}
+{\sc Sinha, R.} {\sc and} {\sc Zobel, J.} 2004.
+\newblock Cache-conscious sorting of large sets of strings with dynamic tries.
+\newblock {\em J. Exp. Algorithmics\/}~{\em 9}, 1.5.
+
+\bibitem[\protect\citeauthoryear{Sinha and Zobel}{Sinha and
+  Zobel}{2005}]{SinhaZobel05}
+{\sc Sinha, R.} {\sc and} {\sc Zobel, J.} 2005.
+\newblock Using random sampling to build approximate tries for efficient string
+  sorting.
+\newblock {\em J. Exp. Algorithmics\/}~{\em 10}, 2.10.
+
+\bibitem[\protect\citeauthoryear{Sleator and Tarjan}{Sleator and
+  Tarjan}{1985}]{SleatorTarjan85}
+{\sc Sleator, D.~D.} {\sc and} {\sc Tarjan, R.~E.} 1985.
+\newblock Self-adjusting binary search trees.
+\newblock {\em J. ACM\/}~{\em 32,\/}~3, 652--686.
+
+\bibitem[\protect\citeauthoryear{Stroustrup}{Stroustrup}{1997}]{Stroustrup97}
+{\sc Stroustrup, B.} 1997.
+\newblock {\em The C++ Programming Language, Third Edition}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA.
+
+\bibitem[\protect\citeauthoryear{Sussenguth}{Sussenguth}{1963}]{Sussenguth63}
+{\sc Sussenguth, E.~H.} 1963.
+\newblock Use of tree structures for processing files.
+\newblock {\em Commun. ACM\/}~{\em 6,\/}~5, 272--279.
+
+\bibitem[\protect\citeauthoryear{van Emde~Boas}{van
+  Emde~Boas}{1977}]{vanEmdeBoas77}
+{\sc van Emde~Boas, P.} 1977.
+\newblock Preserving order in a forest in less than logarithmic time and linear
+  space.
+\newblock {\em Inf. Process. Lett.\/}~{\em 6,\/}~3, 80--82.
+
+\bibitem[\protect\citeauthoryear{Willard}{Willard}{1984}]{Willard84}
+{\sc Willard, D.~E.} 1984.
+\newblock New trie data structures which support very fast search operations.
+\newblock {\em J. Comput. Syst. Sci.\/}~{\em 28,\/}~3, 379--394.
+
+\end{thebibliography}

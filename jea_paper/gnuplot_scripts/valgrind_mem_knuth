@@ -1,0 +1,24 @@
+set key top left Left
+set term postscript eps 20 
+set boxwidth 0.125 absolute 
+#set style data linespoints 
+set style fill pattern 0 border -1
+set yrange [0:] 
+#set ticscale 0 0 
+set offsets .1, .5, 0, 0 
+set bmargin 3
+set xtics ("                    Top" 0, "                 Amarok" 1, "                   Konqueror" 2, "                   KPDF" 3) 
+#set logscale x
+#set xlabel 'Number of keys'
+#set xtics ("2^16" 65536, "2^17" 131072, "2^18" 262144, "2^19" 524288, "2^20" 1048576, "2^21" 2097152, "2^22" 4194304, "2^23" 8388608, "2^24" 16777216, "2^25" 33554432, "2^26" 67108864)
+#set xrange [65536:]
+set ylabel 'Megabytes'
+set output '../plots/knuth_valgrind_mem.eps'
+
+plot \
+'../data/averaged_knuth_results/stree_valgrind_mem' using ($0+0.75):($1/1048576.0) title 'S-tree' with boxes fill pattern 0,\
+'../data/averaged_knuth_results/lpcbtrie_valgrind_mem' using ($0+0.15):($1/1048576.0) title 'LPCB-trie' with boxes fill pattern 1,\
+'../data/averaged_knuth_results/map_valgrind_mem' using ($0+0.6):($1/1048576.0) title 'Red-black tree' with boxes fill pattern 2,\
+'../data/averaged_knuth_results/btree_valgrind_mem' using ($0+0.45):($1/1048576.0) title 'B-tree' with boxes fill pattern 3,\
+'../data/averaged_knuth_results/lpcqtrie_valgrind_mem' using ($0+0.3):($1/1048576.0) title 'LPCQ-trie' with boxes fill pattern 4
+

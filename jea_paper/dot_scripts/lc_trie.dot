@@ -1,0 +1,83 @@
+digraph g {
+"node0" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0| <f1> 1 | <f2> 2 | <f3> 3"
+shape = "Mrecord"
+];
+"node2" [
+#fixedsize = "true"
+#width = "1.5"
+label = "<f0> 0|<f1> 1 | <f2> 2 | <f3> 3"
+shape = "Mrecord"
+];
+
+
+"leafA" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafB" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafC" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafD" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafE" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafF" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+"leafG" [
+height = "0.2"
+width  = "0.2"
+label  = ""
+color  = "black"
+style  = filled
+shape  = "box"
+];
+
+"node0":f0 -> "leafA"
+"node0":f1 -> "leafB"
+"node0":f2 -> "leafC"
+"node0":f3 -> "node2"
+
+"node2":f0 -> "leafD"
+"node2":f1 -> "leafE"
+"node2":f2 -> "leafF"
+"node2":f3 -> "leafG"
+}
+

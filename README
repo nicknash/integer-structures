@@ -1,0 +1,82 @@
+=========================================================
+Comparing Integer Data Structures for 32 and 64-bit Keys
+
+          Nicholas Nash and David Gregg.
+=========================================================
+               
+0. Introduction
+1. Compilation
+2. Result Generation
+3. Paper compilation
+
+---------------
+0. Introduction
+---------------
+
+This file describes how to compile and generate the results described in the 
+paper. It assumes that the compilation and results gathering are being
+executed under the BASH shell, and gcc/g++/make, Python, Perl, gnuplot and latex are all 
+available. 
+
+All commands given below are described relative to the directory where this file (README) resides
+in the extracted archive.
+
+--------------
+1. Compilation
+--------------
+
+Compilation of the code for the data structures is very simple, simply type:
+
+
+$ cd expts
+$ make
+
+
+This will build a single binary 'perf_test' that can be used
+for comparing the performance of the data structures.
+
+--------------------
+2. Result Generation
+--------------------
+
+Gathering the results can be accomplished by simply typing:
+
+$ cd expts
+$ ./gather.py
+
+This is likely to take a several hours at the minimum.
+To have the experiments continue after you log out,
+and so that you can monitor them remotely with a 'tail -f',
+this might be useful:
+
+$ nohup ./gather.py 1>progress 2>errors &
+
+To average the results into the form used in the paper,
+there is a script called 'average.py'.
+
+Simply supply this script with the directory of the results
+greater by 'gather.py'.
+
+--------------------
+3. Paper Compilation
+--------------------
+
+To compile the paper to a pdf, type:
+
+$ cd jea_paper
+$ latex jea_paper
+$ dvipdf jea_paper.dvi
+
+If you wish to see freshly generated 
+plots in the paper type:
+
+$ cd jea_paper/gnuplot_scripts
+$ ./gnuplot_dir.pl
+
+Then recompile the paper as just described.
+
+Note that all the data presented in the paper is
+present in the directory 'jea_paper/data'
+
+Furthermore, additional results for a Sun UltraSPARC IIIi
+architecture may be found in 'jea_paper/data/averaged_melody_results'
