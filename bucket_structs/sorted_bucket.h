@@ -5,6 +5,7 @@
 #include <bucket_structs/common.h>
 #include <key_utils/key_utils.h>
 #include <count_alloc/count_alloc.h>
+#include <algorithm>
 
 template <class KeyType, class ValueType, bool count_mem = false> class SortedBucket
 {
@@ -309,64 +310,12 @@ public:
     }
     ValueType* locate_with_list(const KeyType& key)
     {
-        using namespace std;
-        /*KeyType* it = lower_bound(keys, keys + num_elems, key);
-          if(it != keys + num_elems)
-          {
-          value = *(values + (it - keys));
-          return true;
-          }*/
-        static const int BSEARCH_THRESHOLD = 10;
-        int first = 0, last = num_elems - 1;
-        KeyType *p = keys;
-        while(first - last >= BSEARCH_THRESHOLD) 
-        {
-            int mid = ((unsigned int) (first + last)) >> 1;
-            KeyType *q = p + mid;
-            if(key > *q)
-            {
-                first = mid + 1;
-            }
-            else if(key < *q)
-            {
-                last = mid - 1;
-            }
-            else
-            {
-                return values + mid;        
-            }
+        if(key < keys[0]) {
+            return prev->locate_with_list(key);
+        } else { 
+            auto it = std::upper_bound(keys, keys + num_elems, key);
+            return (--it);
         }
-        KeyType *q = p + last;
-        p += first;
-        while(*p < key)
-        {
-            p++;
-            if(p > q) 
-            {
-                // If here then everything in this bucket is less than key
-                // and everything in successor bucket is greater, so largest
-                // key less is last key in this bucket
-                return values + num_elems - 1;
-            }
-        }
-        if(*p == key)
-        {
-            return values + (p - keys);
-        }
-        // If here then *p > key
-        // we know *(p - 1) is less than key, if it exists
-        if(p == keys)
-        {
-            if(prev)
-            {
-                return prev->values + num_elems - 1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        return values + (p - keys) - 1;
     }
     inline ValueType* get_max_value_ptr()
     {
