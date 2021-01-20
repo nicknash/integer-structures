@@ -13,6 +13,7 @@ template <class KeyType, class ValueType, class TopStruct, class UpdateLeafBucke
     typedef typename KeyInfo::BitIdx BitIdx;
     typedef typename TopStruct::Leaf Leaf;
     typedef typename TopStruct::INode INode;
+    typedef /*unsigned short*/unsigned int ChildIdx;
 
     TopStruct& top_struct;
     int bucket_size;
@@ -56,7 +57,7 @@ template <class KeyType, class ValueType, class TopStruct, class UpdateLeafBucke
                 fb = b;
             }
             Leaf* l = new Leaf(key, b);
-            parent->add_leaf(l, leaf_idx);
+            parent->add_leaf(l, (ChildIdx)leaf_idx);
 
             update_mem_counter<count_mem,Bucket>(MemCounter::NEW, b);
             update_mem_counter<count_mem,Leaf>(MemCounter::NEW, l);

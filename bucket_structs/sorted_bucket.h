@@ -10,6 +10,8 @@
 template <class KeyType, class ValueType, bool count_mem = false> class SortedBucket
 {
 public:
+    typedef /*unsigned short*/unsigned int ChildIdx;
+
     int num_elems, capacity, max_capacity;
     SortedBucket* prev;
     SortedBucket* next;
@@ -209,7 +211,7 @@ public:
     {
         const KeyType& k = keys[0];
         const KeyType& v = values[0];
-        int idx = KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
+        int idx = (ChildIdx)KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
         SortedBucket* first_new = new SortedBucket<KeyType,ValueType,count_mem>(k, v, INITIAL_CAPACITY, max_capacity);
         update_mem_counter<count_mem,SortedBucket>(MemCounter::NEW, first_new);
         if(prev)
@@ -226,7 +228,7 @@ public:
         {
             const KeyType& k = keys[i];
             const KeyType& v = values[i];
-            int idx = KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
+            int idx = (ChildIdx)KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
             if(!node->leaves[idx])
             {
                 SortedBucket* b_new = new SortedBucket<KeyType,ValueType,count_mem>(k, v, INITIAL_CAPACITY, max_capacity);
