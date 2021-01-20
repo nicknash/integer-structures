@@ -209,8 +209,8 @@ public:
     }
     template <class INode, class Leaf> SortedBucket* burst_into(INode* node, Leaf*, int shift, int length)
     {
-        const KeyType& k = keys[0];
-        const KeyType& v = values[0];
+        const KeyType& k = (KeyType)keys[0];
+        const KeyType& v = (KeyType)values[0];
         int idx = (ChildIdx)KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
         SortedBucket* first_new = new SortedBucket<KeyType,ValueType,count_mem>(k, v, INITIAL_CAPACITY, max_capacity);
         update_mem_counter<count_mem,SortedBucket>(MemCounter::NEW, first_new);
@@ -226,8 +226,8 @@ public:
         SortedBucket* b = first_new;
         for(int i = 1; i < num_elems; i++)
         {
-            const KeyType& k = keys[i];
-            const KeyType& v = values[i];
+            const KeyType& k = (KeyType)keys[i];
+            const KeyType& v = (KeyType)values[i];
             int idx = (ChildIdx)KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
             if(!node->leaves[idx])
             {
@@ -316,7 +316,7 @@ public:
             return prev->locate_with_list(key);
         } else { 
             auto it = std::upper_bound(keys, keys + num_elems, key);
-            return (--it);
+            return (ValueType*)(--it);
         }
     }
     inline ValueType* get_max_value_ptr()
