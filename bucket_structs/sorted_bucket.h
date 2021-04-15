@@ -313,8 +313,12 @@ public:
     ValueType* locate_with_list(const KeyType& key)
     {
         if(key < keys[0]) {
-            return prev->locate_with_list(key);
-        } else { 
+            if (prev==nullptr) {
+                return nullptr;
+            } else {
+                return prev->locate_with_list(key);
+            }
+        } else {
             auto it = std::upper_bound(keys, keys + num_elems, key);
             return (ValueType*)(--it);
         }
