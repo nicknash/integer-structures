@@ -41,7 +41,7 @@ public:
         inline void operator()(INode* parent, const KeyType& leaf_idx, const KeyType& key)
         {
             Leaf *l = new Leaf(key, value);
-            parent->add_leaf(l, leaf_idx);
+            parent->add_leaf(l, (ChildIdx)leaf_idx);
             update_mem_counter<count_mem,Leaf>(MemCounter::NEW, l);           
             return;
         }
@@ -53,14 +53,14 @@ public:
         DefaultUpdateLeaf(ValueType value) : value(value) {}
         inline void operator()(INode* n, const KeyType& key, BitIdx shift)
         {
-            ChildIdx idx = KeyInfo::extract_bits(key, shift, n->num_children_bits);
+            ChildIdx idx = (ChildIdx)KeyInfo::extract_bits(key, shift, n->num_children_bits);
             n->leaves[idx]->value = value;
             return;
         }
         inline void connect(INode* parent, INode* node, ChildIdx idx, BitIdx shift)
         {
             const KeyType& k = node->leaves[idx]->key;
-            int pidx = KeyInfo::extract_bits(k, shift, parent->num_children_bits);
+            int pidx = (ChildIdx)KeyInfo::extract_bits(k, shift, parent->num_children_bits);
             parent->leaves[pidx] = node->leaves[idx];
             return;
         }
@@ -192,7 +192,7 @@ public:
             UpdateLeaf update_leaf)
     {        
         BitIdx shift = NUM_KEY_BITS - root->num_children_bits;
-        ChildIdx idx = KeyInfo::extract_bits(key, shift, root->num_children_bits);
+        ChildIdx idx = (ChildIdx)KeyInfo::extract_bits(key, shift, root->num_children_bits);
 
         ChildIdx parent_idx = 0;
         INode* parent = 0;
@@ -206,7 +206,7 @@ public:
         {
             shift -= child->num_children_bits + child->num_skipped;
             parent_idx = idx; // node is found at parent_idx in parent
-            idx = KeyInfo::extract_bits(key, shift, child->num_children_bits);
+            idx = (ChildIdx)KeyInfo::extract_bits(key, shift, child->num_children_bits);
             parent = node;
             node = child;
             child = node->inodes[idx];
@@ -297,7 +297,7 @@ public:
                 tmp -= splitter->num_children_bits;
 
                 create_leaf(splitter, KeyInfo::extract_bits(key, tmp, splitter->num_children_bits), key);
-                splitter->add_leaf(leaf, KeyInfo::extract_bits(leaf->key, tmp, splitter->num_children_bits));
+                splitter->add_leaf(leaf, (ChildIdx)KeyInfo::extract_bits(leaf->key, tmp, splitter->num_children_bits));
 
                 if(!splitter->num_skipped)
                 {
@@ -369,7 +369,7 @@ public:
 
             // Now we add in the sub-trie that originally had the non-matching path
             // compression string. 
-            splitter->add_inode(child, KeyInfo::extract_bits(child->skipped_bits, ns - len - splitter->num_children_bits, splitter->num_children_bits));
+            splitter->add_inode(child, (ChildIdx)KeyInfo::extract_bits(child->skipped_bits, ns - len - splitter->num_children_bits, splitter->num_children_bits));
 
             // Now update the child with the suffix of its original path compression string.
             child->num_skipped = ns - len - splitter->num_children_bits;
@@ -397,7 +397,7 @@ public:
                                                             RemovePred remove_pred)
     {
         BitIdx shift = NUM_KEY_BITS - root->num_children_bits;
-        ChildIdx idx = KeyInfo::extract_bits(key, shift, root->num_children_bits);
+        ChildIdx idx = (ChildIdx)KeyInfo::extract_bits(key, shift, root->num_children_bits);
 
         ChildIdx parent_idx = 0;
         ChildIdx parent_parent_idx = 0;
@@ -417,7 +417,7 @@ public:
             shift -= child->num_children_bits + child->num_skipped;
             parent_parent_idx = parent_idx;
             parent_idx = idx; // node is found at parent_idx in parent
-            idx = KeyInfo::extract_bits(key, shift, child->num_children_bits);
+            idx = (ChildIdx)KeyInfo::extract_bits(key, shift, child->num_children_bits);
             parent_parent = parent;
             parent = node;
             node = child;
@@ -576,7 +576,7 @@ public:
             BitIdx num_bits = n->num_children_bits;
             if(n->num_skipped)
             {
-                ChildIdx pidx = parent_offset + KeyInfo::extract_bits(n->skipped_bits, n->num_skipped - min_children_bits, min_children_bits);
+                ChildIdx pidx = parent_offset + (ChildIdx)KeyInfo::extract_bits(n->skipped_bits, n->num_skipped - min_children_bits, min_children_bits);
                 parent->inodes[pidx] = n;
                 parent->is_internal[pidx] = true;    
                 n->num_skipped -= min_children_bits;
@@ -725,14 +725,14 @@ public:
     template <class MatchTester> ValueType* search(const KeyType& key, MatchTester match_tester) const
     {
         BitIdx shift = NUM_KEY_BITS - root->num_children_bits;
-        ChildIdx idx = KeyInfo::extract_bits(key, shift, root->num_children_bits);
+        ChildIdx idx = (ChildIdx)KeyInfo::extract_bits(key, shift, root->num_children_bits);
 
         INode* node = root;
         INode* child = root->inodes[idx];
         while(shift > 0 && node->is_internal[idx])            
         {
             shift -= child->num_children_bits + child->num_skipped;
-            idx = KeyInfo::extract_bits(key, shift, child->num_children_bits);
+            idx = (ChildIdx)KeyInfo::extract_bits(key, shift, child->num_children_bits);
             node = child;
             child = node->inodes[idx];
         }    
@@ -751,14 +751,14 @@ public:
     ValueType* general_search(const KeyType& key, SearchStatus& status) const
     {
         BitIdx shift = NUM_KEY_BITS - root->num_children_bits;
-        ChildIdx idx = KeyInfo::extract_bits(key, shift, root->num_children_bits);
+        ChildIdx idx = (ChildIdx)KeyInfo::extract_bits(key, shift, root->num_children_bits);
 
         INode* node = root;
         INode* child = root->inodes[idx];
         while(shift > 0 && node->is_internal[idx])            
         {
             shift -= child->num_children_bits + child->num_skipped;
-            idx = KeyInfo::extract_bits(key, shift, child->num_children_bits);
+            idx = (ChildIdx)KeyInfo::extract_bits(key, shift, child->num_children_bits);
             node = child;
             child = node->inodes[idx];
         }    
@@ -802,7 +802,7 @@ public:
         INode* pred_ancestor = 0;
         ChildIdx idx_at_ancestor = 0;
         BitIdx shift = NUM_KEY_BITS - root->num_children_bits;
-        ChildIdx idx = KeyInfo::extract_bits(key, shift, root->num_children_bits);
+        ChildIdx idx = (ChildIdx)KeyInfo::extract_bits(key, shift, root->num_children_bits);
         
         KeyType key_bits = 0;
         // Loop until we are at the bottom of the trie 
@@ -827,7 +827,7 @@ public:
                 break; 
             }
             shift -= child->num_children_bits + child->num_skipped;            
-            idx = KeyInfo::extract_bits(key, shift, child->num_children_bits);
+            idx = (ChildIdx)KeyInfo::extract_bits(key, shift, child->num_children_bits);
             node = child;
             child = node->inodes[idx];
         }

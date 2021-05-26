@@ -5,10 +5,13 @@
 #include <bucket_structs/common.h>
 #include <key_utils/key_utils.h>
 #include <count_alloc/count_alloc.h>
+#include <algorithm>
 
 template <class KeyType, class ValueType, bool count_mem = false> class SortedBucket
 {
 public:
+    typedef /*unsigned short*/unsigned int ChildIdx;
+
     int num_elems, capacity, max_capacity;
     SortedBucket* prev;
     SortedBucket* next;
@@ -206,9 +209,9 @@ public:
     }
     template <class INode, class Leaf> SortedBucket* burst_into(INode* node, Leaf*, int shift, int length)
     {
-        const KeyType& k = keys[0];
-        const KeyType& v = values[0];
-        int idx = KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
+        const KeyType& k = (KeyType)keys[0];
+        const KeyType& v = (KeyType)values[0];
+        int idx = (ChildIdx)KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
         SortedBucket* first_new = new SortedBucket<KeyType,ValueType,count_mem>(k, v, INITIAL_CAPACITY, max_capacity);
         update_mem_counter<count_mem,SortedBucket>(MemCounter::NEW, first_new);
         if(prev)
@@ -223,9 +226,9 @@ public:
         SortedBucket* b = first_new;
         for(int i = 1; i < num_elems; i++)
         {
-            const KeyType& k = keys[i];
-            const KeyType& v = values[i];
-            int idx = KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
+            const KeyType& k = (KeyType)keys[i];
+            const KeyType& v = (KeyType)values[i];
+            int idx = (ChildIdx)KeyTypeInfo<KeyType>::extract_bits(k, shift, length);
             if(!node->leaves[idx])
             {
                 SortedBucket* b_new = new SortedBucket<KeyType,ValueType,count_mem>(k, v, INITIAL_CAPACITY, max_capacity);
@@ -309,64 +312,16 @@ public:
     }
     ValueType* locate_with_list(const KeyType& key)
     {
-        using namespace std;
-        /*KeyType* it = lower_bound(keys, keys + num_elems, key);
-          if(it != keys + num_elems)
-          {
-          value = *(values + (it - keys));
-          return true;
-          }*/
-        static const int BSEARCH_THRESHOLD = 10;
-        int first = 0, last = num_elems - 1;
-        KeyType *p = keys;
-        while(first - last >= BSEARCH_THRESHOLD) 
-        {
-            int mid = ((unsigned int) (first + last)) >> 1;
-            KeyType *q = p + mid;
-            if(key > *q)
-            {
-                first = mid + 1;
+        if(key < keys[0]) {
+            if (prev==nullptr) {
+                return nullptr;
+            } else {
+                return prev->locate_with_list(key);
             }
-            else if(key < *q)
-            {
-                last = mid - 1;
-            }
-            else
-            {
-                return values + mid;        
-            }
+        } else {
+            auto it = std::upper_bound(keys, keys + num_elems, key);
+            return (ValueType*)(--it);
         }
-        KeyType *q = p + last;
-        p += first;
-        while(*p < key)
-        {
-            p++;
-            if(p > q) 
-            {
-                // If here then everything in this bucket is less than key
-                // and everything in successor bucket is greater, so largest
-                // key less is last key in this bucket
-                return values + num_elems - 1;
-            }
-        }
-        if(*p == key)
-        {
-            return values + (p - keys);
-        }
-        // If here then *p > key
-        // we know *(p - 1) is less than key, if it exists
-        if(p == keys)
-        {
-            if(prev)
-            {
-                return prev->values + num_elems - 1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        return values + (p - keys) - 1;
     }
     inline ValueType* get_max_value_ptr()
     {
